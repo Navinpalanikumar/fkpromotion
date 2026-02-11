@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navin Palanikumar - Software Engineer II Promotion Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        header .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: slideInDown 0.8s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header p {
+            font-size: 1.5em;
+            opacity: 0.95;
+            font-weight: 300;
+            animation: slideInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-badge {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            line-height: 60px;
+            font-size: 24px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-content {
+            padding: 60px 40px;
+        }
+
+        .summary {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+            animation: slideInLeft 0.8s ease-out 0.4s both;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .summary h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .summary p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 0.6s ease-out both;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.5s; }
+        .stat-card:nth-child(2) { animation-delay: 0.6s; }
+        .stat-card:nth-child(3) { animation-delay: 0.7s; }
+        .stat-card:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        .stat-card i {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .stat-card h3 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-card p {
+            font-size: 1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: #718096;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .project-card .icon-wrapper {
+            min-width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            font-size: 1.6em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.3;
+            flex: 1;
+        }
+
+        .project-section {
+            margin-bottom: 25px;
+        }
+
+        .project-section h4 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .project-section ul {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+
+        .project-section li {
+            margin-bottom: 10px;
+            color: #4a5568;
+            line-height: 1.6;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .project-section li strong {
+            color: #764ba2;
+            font-weight: 600;
+        }
+
+        .impact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .impact-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+            color: #667eea;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 600;
+            border: 1px solid #d6e3ff;
+        }
+
+        .impact-badge i {
+            font-size: 0.9em;
+        }
+
+        .proof-links {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .proof-links h4 {
+            color: #2d3748;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .proof-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-right: 15px;
+            margin-bottom: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .proof-links a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .proof-links a i {
+            font-size: 0.85em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .competencies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .competency-card {
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+        }
+
+        .competency-card .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .competency-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .competency-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .competency-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .competency-card li {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .competency-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid #667eea;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+        }
+
+        .impact-card i {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .impact-card h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .impact-card p {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        footer p {
+            opacity: 0.9;
+            font-size: 1em;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .highlight-box p {
+            color: #92400e;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .main-content {
+                padding: 40px 20px;
+            }
+
+            .section-header h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .scroll-top {
+                display: none;
+            }
+
+            .project-card:hover {
+                transform: none;
+            }
+        }
+
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="content">
+                <div class="icon-badge">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h1>Navin Palanikumar</h1>
+                <p>Promotion Portfolio: Software Engineer I → Software Engineer II</p>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="summary">
+                <h2>
+                    <i class="fas fa-star"></i>
+                    Executive Summary
+                </h2>
+                <p>As a <strong>Software Engineer I</strong>, I have consistently demonstrated <strong>Software Engineer II level capabilities</strong> by exhibiting exceptional ownership, autonomy, and technical leadership across the full software development lifecycle. My contributions span <strong>infrastructure modernization, platform reliability, feature development, and operational excellence</strong>, delivering measurable business impact across revenue generation, cost optimization, and customer satisfaction that significantly exceed current role expectations.</p>
+
+                <p style="margin-top: 15px;"><strong>Key Achievements:</strong></p>
+                <ul style="margin-left: 25px; margin-top: 10px;">
+                    <li style="margin-bottom: 8px;"><strong>Revenue Enablement:</strong> Enabled <strong>$500K+ Walmart Supplier Connect ICT deal</strong> by delivering Azure Order Visibility platform from zero to 7 production services in 1 month. Facilitated <strong>Western Digital signing</strong> through WMS inventory platform implementation.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Cost Optimization:</strong> Led Kafka migration (Cloudera → Confluent) across 10 services and 60+ topics achieving <strong>$129,504 annual savings (61% cost reduction)</strong> with zero downtime and zero data loss.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Customer Impact:</strong> Delivered end-to-end solutions for enterprise customers including <strong>Meijer (Risk Export Platform), 3M (ProductLineItem OIS), Arrow (FTZ solution)</strong>, directly unblocking critical business workflows and adoption goals.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Operational Excellence:</strong> Reduced POC setup time by <strong>70% (2-3 days → 2-3 hours)</strong> through Mass Upload framework. Achieved <strong>100% DAG success rate</strong> and reduced alerts from frequent noise to <strong>1-3 per week</strong>. Reduced MTTR from hours to minutes.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Quality & Innovation:</strong> Co-won <strong>OIS Automation Hackathon 2025</strong>. Increased test coverage from <strong>19% → 78%</strong> and reduced test execution time from <strong>~1 hour → seconds/minutes</strong>. Built AI-powered commit standardization tool and automated stress testing framework.</li>
+
+                    <li style="margin-bottom: 8px;"><strong>Technical Breadth:</strong> Delivered production-ready solutions across <strong>full stack (Java/Spring Boot, React/Angular)</strong>, <strong>event-driven systems (Kafka)</strong>, <strong>data platforms (Snowflake, PostgreSQL)</strong>, and <strong>cloud infrastructure (Azure, Kubernetes, ArgoCD)</strong>.</li>
+                </ul>
+
+                <p style="margin-top: 15px;">Operating with <strong>minimal guidance and high autonomy</strong>, I consistently identified operational gaps proactively, translated ambiguous requirements into scalable solutions, and established reusable patterns adopted across the team. My work has directly contributed to <strong>faster customer onboarding, improved platform reliability, reduced engineering overhead, and strengthened long-term foundation</strong> for analytics and AI-powered capabilities.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>$129,504</h3>
+                    <p>Annual Cost Savings<br>(61% reduction via Kafka migration)</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>ZERO</h3>
+                    <p>Downtime & Data Loss<br>during critical migrations</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>70%</h3>
+                    <p>Reduction in POC Setup Time<br>(2-3 days → 2-3 hours)</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>78%</h3>
+                    <p>Test Coverage Achievement<br>(from 19%)</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2>Ownership: Major Features & Initiatives</h2>
+                    <p>End-to-end delivery of complex, high-impact projects demonstrating SE II ownership capabilities</p>
+                </div>
+
+                <!-- Project 1: ProductLineItem OIS -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>ProductLineItem OIS Implementation</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Owned and delivered the ProductLineItem OIS feature end-to-end, enabling interaction between shipment product line items and corresponding orders and deliveries in Order Visibility</li>
+                            <li>Integrated the new Product Line Item structure under shipments, ensuring accurate propagation of product-level details to Orders and Deliveries</li>
+                            <li>Implemented shipment–order line item linking logic using ProductLineItem details from shipments, establishing a reliable association across entities</li>
+                            <li>Ensured data consistency and correctness across shipment, order, and delivery workflows by handling edge cases and backward compatibility</li>
+                            <li>Improved Order Visibility accuracy and traceability, enabling downstream features and customer workflows to function correctly</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p>Unblocked Arrow's FTZ solution by enabling accurate product line item linkage between shipments and orders in Order Visibility</p>
+                        </div>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-trophy"></i> Impact and Recognitions</h4>
+                        <ul>
+                            <li>Actively <strong>3M company</strong> utilizing this feature successfully</li>
+                        </ul>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5271" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5271
+                        </a>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5117" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5117
+                        </a>
+                        <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18381144255" target="_blank">
+                            <i class="fas fa-file-alt"></i> Architecture Design Doc
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Azure Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Led Azure Order Visibility Platform Implementation (Zero → Production)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Established Azure presence from scratch for the OIS Order Visibility platform, taking it from no Azure footprint to <strong>7 production services</strong> running reliably in Azure</li>
+                            <li>Delivered the end-to-end Azure Order Visibility setup within <strong>1 month</strong>, achieving production readiness under an aggressive timeline</li>
+                            <li>Migrated and enabled all Order Visibility–related services in the Azure environment, ensuring feature parity with existing platforms</li>
+                            <li>Implemented a dedicated Azure configuration management service (ov-deployment), centralizing Azure-specific configs and simplifying deployments and operations</li>
+                            <li>Integrated ArgoCD-based GitOps deployments for Azure OV applications, enabling consistent, automated, and repeatable production rollouts</li>
+                            <li>Performed comprehensive end-to-end validation, covering callbacks, exports, data dumping, linking, and fulfillment flows to ensure production stability</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p>Supported the successful signing of the Walmart Supplier Connect ICT deal (> $500K) through timely and reliable platform delivery</p>
+                        </div>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-trophy"></i>
+                            Strategic Revenue Impact
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-clock"></i>
+                            1 Month Delivery
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-server"></i>
+                            7 Production Services
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-4936" target="_blank">
+                            <i class="fab fa-jira"></i> OV-4936
+                        </a>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5000" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5000
+                        </a>
+                        <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/edit-v2/18718097416" target="_blank">
+                            <i class="fas fa-file-alt"></i> Azure Environment Setup Doc
+                        </a>
+                        <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18717900811" target="_blank">
+                            <i class="fas fa-file-alt"></i> Release Guidelines
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Kafka Migration -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Led Kafka Migration from Cloudera to Confluent (Zero Downtime)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Owned and executed the Kafka platform migration from Cloudera to Confluent, covering <strong>10 critical production services</strong> across order, inventory, and ingestion workflows</li>
+                            <li>Successfully migrated <strong>60+ production Kafka topics</strong>, including high-throughput, business-critical event streams supporting orders, shipments, deliveries, and inventory</li>
+                            <li>Achieved <strong>zero downtime, zero data loss, and zero customer impact</strong> throughout the migration by designing safe cutover strategies and validation checks</li>
+                            <li>Coordinated producer and consumer updates across multiple services, ensuring schema compatibility and seamless event continuity during the transition</li>
+                            <li>Reduced long-term operational risk and improved scalability by standardizing on Confluent-managed Kafka, enabling better monitoring, reliability, and future growth</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p><strong>Annual Savings: $129,504 (61% cost reduction)</strong></p>
+                            <p>That's like saving $10,800 every month</p>
+                        </div>
+                        <ul>
+                            <li>Moved our entire data streaming platform to the cloud (think of it as upgrading from an old warehouse to a modern, automated facility)</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-medal"></i>
+                            Operational Excellence
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-dollar-sign"></i>
+                            $129K Annual Savings
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            Zero Downtime
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-database"></i>
+                            60+ Topics Migrated
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-4741" target="_blank">
+                            <i class="fab fa-jira"></i> OV-4741
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: AI Commit Tool -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI-Powered Commit Standardization Tool</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Owned and built an AI-powered commit workflow tool to standardize commit messages and improve developer productivity, traceability, and code hygiene across the team</li>
+                            <li>Identified recurring issues with inconsistent commit messages, poor traceability, and accidental file commits, and designed a solution to address them holistically</li>
+                            <li>Implemented AI-assisted code change analysis (using Claude) to automatically suggest meaningful, context-aware commit messages based on actual code diffs</li>
+                            <li>Built a selective commit interface allowing developers to explicitly choose which files to commit, preventing accidental or unrelated changes from being included</li>
+                            <li>Enforced a standardized commit format (branch | message | username) to improve auditability, ownership clarity, and cross-team collaboration</li>
+                            <li>Reduced cognitive overhead and time spent on commits by providing ready-to-use AI-generated commit suggestions, while still allowing custom overrides</li>
+                            <li>Improved overall engineering discipline and repository quality, making it easier to trace changes across branches and contributors</li>
+                            <li>Planned and initiated live demos and knowledge sharing to drive adoption and align the team on best practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p>Improved commit consistency and traceability, making debugging, code reviews, and audits faster and more reliable</p>
+                        </div>
+                        <ul>
+                            <li>Reduced developer friction and errors during commits, improving daily engineering efficiency</li>
+                            <li>Established a foundation for AI-assisted developer workflows, reinforcing a culture of automation and quality</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-code"></i>
+                            Developer Productivity
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-lightbulb"></i>
+                            Innovation
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="#" target="_blank">
+                            <i class="fas fa-video"></i> Presentation: AI Best Practice - 2025/08/25
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Bulk Upload Framework -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h3>End-to-End Bulk Upload Framework Implementation</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Successfully delivered Order, Delivery, and Inventory Mass Upload features end-to-end, covering both <strong>Backend and Frontend</strong> implementations</li>
+                            <li>Enabled CSV-based bulk uploads with templates, comprehensive field/date validation, async processing, progress tracking, and detailed row-level error reporting</li>
+                            <li>Designed the system to support <strong>unlimited uploads and records</strong>, including multi-line orders and large-scale inventory snapshots (1000+ positions per upload)</li>
+                            <li>Integrated S3 audit trails with retention policies and applied rate limiting to ensure scalability and operational safety</li>
+                            <li>Leveraged existing async APIs and WMS integrations to achieve high-performance processing within <strong>1–2 minutes per batch</strong></li>
+                            <li>Implemented role-based authorization and robust APIs to support secure, enterprise-grade bulk operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p><strong>POC setup time: 2-3 days → 2-3 hours (70% reduction)</strong></p>
+                        </div>
+                        <p><strong>Impact on Implementation Team:</strong></p>
+                        <ul>
+                            <li>Empowered the Implementation team with a self-service CSV upload workflow, reducing POC setup time from hours to minutes and eliminating engineering dependency</li>
+                            <li>Self-service capability (no engineering dependency)</li>
+                            <li>Eliminated SFTP access requirements</li>
+                            <li>Eliminated FileZilla knowledge requirement</li>
+                            <li>Faster customer trial setup</li>
+                            <li>Improved data quality through validation</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-users"></i>
+                            Implementation Efficiency
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-rocket"></i>
+                            70% Time Reduction
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-check-circle"></i>
+                            Self-Service
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5306" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5306
+                        </a>
+                        <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18718425092" target="_blank">
+                            <i class="fas fa-file-alt"></i> Mass Upload Feature - Architecture Design
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6: WMS Ingestion Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Drove WMS Inventory & Forecast Ingestion Platform (S3 + Kafka)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Owned and delivered a real-time ingestion platform for WMS inventory snapshots, supply forecasts, and demand forecasts, enabling downstream analytics and planning teams to operate on near real-time data</li>
+                            <li>Designed and implemented secure, production-grade APIs with <strong>JWT authentication</strong>, standardized validation, and resilient error handling, improving system reliability and partner integration confidence</li>
+                            <li>Built a scalable, audit-friendly <strong>S3 data ingestion pipeline</strong> with time-partitioned storage and deterministic file naming, supporting high-volume ingestion with zero manual intervention</li>
+                            <li>Integrated the platform into the event-driven ecosystem using <strong>Kafka</strong>, publishing structured ingestion events to unblock multiple downstream consumers without tight coupling</li>
+                            <li>Reduced future engineering effort by creating shared ingestion infrastructure (common DTOs, Kafka producers, S3 configuration, key-generation strategy), improving reuse and long-term maintainability across services</li>
+                            <li>Ensured enterprise-level readiness through comprehensive unit test coverage and standardized failure handling, lowering production risk and operational overhead</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p><strong>Western Digital was signed</strong></p>
+                        </div>
+                        <ul>
+                            <li>Implement comprehensive data warehouse integration to support advanced analytics, reporting, and AI-powered capabilities through inventory tracking tables, data quality metrics, and aggregated reporting structures</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-handshake"></i>
+                            Customer Acquisition
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-stream"></i>
+                            Real-time Platform
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5096" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5096
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 7: Risk Export Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>End-to-End Risk Export Platform for OIS (Service → Snowflake → UI)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Owned and implemented end-to-end Risk Export functionality (Backend + Frontend), enabling risk data flow from service-level processing to Snowflake tables and user-facing exports</li>
+                            <li>Designed and built the risk ingestion pipeline covering <strong>Kafka message producers/listeners, persistence to OisRiskReason, Snowflake integration</strong>, and export-ready datasets across order, line, and shipment levels</li>
+                            <li>Enabled latest-risk resolution logic, ensuring correct handling when multiple risk reasons are generated simultaneously, improving data accuracy and trust</li>
+                            <li>Enhanced exports to include risk reason, risk source, occurrence time, reason code, and priority, significantly improving analytical and operational visibility for Meijer teams</li>
+                            <li>Delivered multiple Meijer-requested enhancements (priority updates, sorting by risk time, mass reason-code updates, backfill support, WMS receipt date mapping, SKU/case-pack mapping), directly incorporating onsite feedback from the August visit</li>
+                            <li>Unblocked Inbound Logistics, Warehouse/DC teams, and Merchandisers by providing a single source of truth for inbound risk visibility, reducing dependency on legacy systems and manual exports</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p>Enabled Meijer teams to track inbound risks centrally, initiate downstream actions (including debits), and plan warehouse and merchandising activities more efficiently</p>
+                        </div>
+                        <ul>
+                            <li>Laid the foundation for broader adoption of the FK platform across all 3 business units, directly supporting the stated adoption goals</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-analytics"></i>
+                            Analytics Enablement
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-building"></i>
+                            Meijer Integration
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-3652" target="_blank">
+                            <i class="fab fa-jira"></i> OV-3652
+                        </a>
+                        <a href="https://fourkites.atlassian.net/browse/OV-4495" target="_blank">
+                            <i class="fab fa-jira"></i> OV-4495
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 8: L1 Stability -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Proactively Improved L1 Stability, Alerting & Airflow Reliability</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Proactively owned L1 support responsibilities, resolving the majority of production bugs and reducing alert volume from frequent noise to just <strong>1–3 actionable alerts per week</strong></li>
+                            <li>Stabilized the team's release process by initiating and consistently maintaining the release cycle, improving predictability and reducing production risk</li>
+                            <li>Identified Airflow DAG failures as a recurring operational pain point and led a focused DAG refactoring and optimization effort to address root causes</li>
+                            <li>Refactored monolithic SQL by separating DDL and DML operations, splitting Airflow tasks to enable precise failure detection and faster recovery</li>
+                            <li>Achieved <strong>zero pipeline failures and a 100% success rate</strong> across critical DAGs (Order, Delivery, Line Item, and multiple data warehouse sync pipelines)</li>
+                            <li>Established best practices and reusable templates for DAG development, documented the approach, and drove adoption across the team</li>
+                            <li>Further reduced operational noise by tuning alert thresholds, eliminating false positives, and creating new targeted alerts and dashboards for Kafka topics and pipeline health</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p><strong>100% success rate</strong> across critical DAGs | Alerts reduced to <strong>1–3 per week</strong> | MTTR: hours → minutes</p>
+                        </div>
+                        <ul>
+                            <li>Significantly improved platform reliability by eliminating recurring Airflow failures, reducing alert fatigue, and establishing scalable operational best practices</li>
+                            <li>Reduced MTTR from hours to minutes, eliminated Snowflake sync issues, and improved data quality by preventing partial or inconsistent loads</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-check-circle"></i>
+                            Platform Reliability
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-percentage"></i>
+                            100% Success Rate
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-bell-slash"></i>
+                            95% Alert Reduction
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-4988" target="_blank">
+                            <i class="fab fa-jira"></i> OV-4988
+                        </a>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5261" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5261
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 9: Stress Testing -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Built Automated Stress Testing Framework (Proactive Initiative)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Proactively built a fully automated stress testing framework from scratch, addressing the lack of standardized performance and capacity validation</li>
+                            <li>Integrated zero-touch <strong>Jenkins pipelines</strong> for scheduled and on-demand execution, embedding stress testing into CI/CD workflows</li>
+                            <li>Enabled configurable load testing (users, duration, ramp-up, endpoints) with standardized scenarios for baseline, peak, and spike traffic</li>
+                            <li>Automated rich performance reporting (P90/P95/P99 latency, throughput, error rates, trends) to detect regressions early</li>
+                            <li>Implemented S3-based historical report storage, establishing a reusable foundation for performance benchmarking across services</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p>Introduced zero-touch, CI-integrated stress testing framework that institutionalized performance validation and capacity confidence across services</p>
+                        </div>
+                        <ul>
+                            <li>Prevented performance regressions before production</li>
+                            <li>Improved confidence in capacity planning and scaling decisions</li>
+                            <li>Reduced manual effort and release risk</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-clipboard-check"></i>
+                            Quality Assurance
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-infinity"></i>
+                            CI/CD Integration
+                        </span>
+                    </div>
+
+                    <div class="proof-links">
+                        <h4><i class="fas fa-link"></i> Proof & Documentation:</h4>
+                        <a href="https://fourkites.atlassian.net/browse/OV-5087" target="_blank">
+                            <i class="fab fa-jira"></i> OV-5087
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 10: Hackathon -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>OIS Automation Hackathon 2025 (Co-Winner)</h3>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-tasks"></i> Examples</h4>
+                        <ul>
+                            <li>Co-won the OIS Automation Hackathon 2025, delivering an AI-driven automation solution to scale quality with fast-moving OIS releases</li>
+                            <li>Increased Order Service test coverage from <strong>19% → ~78%</strong> and Inventory Service coverage to <strong>~75%</strong>, significantly improving release confidence</li>
+                            <li>Built a production-ready End-to-End frontend automation framework using <strong>Playwright</strong> from scratch, automating 40+ features and complete flows in days</li>
+                            <li>Reduced test execution time from <strong>~1 hour per flow to seconds/minutes</strong>, enabling developers to add automation without slowing delivery</li>
+                            <li>Established CI/CD quality gates, unified reporting across services, workers, and frontend, and full traceability via TestRail, dashboards, and automated reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-section">
+                        <h4><i class="fas fa-chart-bar"></i> Business Outcomes</h4>
+                        <div class="highlight-box">
+                            <p><strong>Test Coverage: 19% → 78%</strong> | Test Execution: <strong>~1 hour → seconds/minutes</strong> | <strong>Co-Winner</strong> of OIS Automation Hackathon 2025</p>
+                        </div>
+                        <ul>
+                            <li>Increased automation coverage from 19% → ~78% (OV) significantly improving release confidence and reducing production risk</li>
+                            <li>Reduced test execution time from ~1 hour to seconds/minutes while eliminating third-party tool dependency, improving delivery speed and lowering costs</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-badges">
+                        <span class="impact-badge">
+                            <i class="fas fa-lightbulb"></i>
+                            Innovation Recognition
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-trophy"></i>
+                            Co-Winner
+                        </span>
+                        <span class="impact-badge">
+                            <i class="fas fa-chart-line"></i>
+                            78% Test Coverage
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autonomy Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Autonomy: Independent with Minimal Guidance</h2>
+                    <p>Operating with high ownership and minimal supervision, exceeding SE I expectations</p>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Examples of Autonomy</h3>
+                    <ul>
+                        <li>Took full ownership of complex, cross-cutting initiatives (Azure OV setup, Kafka migration, Bulk Uploads, WMS ingestion, Risk Exports) from design through execution and validation</li>
+                        <li>Proactively identified operational and reliability gaps (Airflow failures, alert noise, lack of stress testing) and delivered durable fixes and frameworks without being explicitly asked</li>
+                        <li>Independently drove large-scale platform migrations and refactors, coordinating changes across multiple services while ensuring zero downtime and zero customer impact</li>
+                        <li>Regularly translated ambiguous product and customer requirements (Meijer, Walmart, Western Digital, 3M) into concrete backend and frontend implementations with minimal guidance</li>
+                        <li>Took ownership of L1 stability and release management, reducing alerts to 1–3 per week and maintaining a predictable release cadence for the team</li>
+                        <li>Consistently operated with high autonomy, independently identifying problem areas, proposing solutions, and delivering production-ready implementations without requiring close supervision</li>
+                        <li>Designed and implemented backward-compatible, incremental rollout strategies (e.g., deliveryNumber vs delivery, schema extensions) to safely evolve critical APIs</li>
+                        <li>Delivered multiple foundational backend capabilities (Supplier Master, Product Master, transactional party types, delivery failure reports, backup & backfill pipelines) independently</li>
+                        <li>Demonstrated strong judgment in balancing speed, correctness, and long-term maintainability, often setting patterns later adopted by the team</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Business Impact</h3>
+                    <ul>
+                        <li>Accelerated delivery of revenue-impacting features by independently owning complex initiatives end-to-end, reducing dependency on senior leadership for execution decisions</li>
+                        <li>Improved platform reliability and customer trust through proactive stabilization efforts, significantly lowering production incidents, alert fatigue, and recovery time</li>
+                        <li>Enabled faster customer onboarding and expansion for strategic accounts (Meijer, Walmart, Western Digital, 3M) by translating ambiguous requirements into scalable, production-ready solutions</li>
+                        <li>Reduced operational and engineering overhead by establishing reusable frameworks, templates, and standards that eliminated repeated problem-solving across teams</li>
+                        <li>Lowered business risk during critical changes (cloud migration, Kafka migration, API evolution) by driving safe, incremental rollouts with zero downtime and zero data loss</li>
+                        <li>Increased organizational velocity by unblocking dependent teams and allowing product, analytics, and implementation teams to move independently without constant engineering intervention</li>
+                        <li>Improved cost efficiency and scalability by modernizing infrastructure and processes, contributing to measurable cost savings and sustainable growth</li>
+                        <li>Strengthened long-term platform foundation, enabling future analytics, AI, and reporting capabilities without rework</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Proficiency Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Proficiency: Multiple Languages/DBs, Scripting, Agile/Scrum</h2>
+                    <p>Full-stack technical expertise with rapid learning capability demonstrating SE II proficiency</p>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technical Proficiency</h3>
+                    <ul>
+                        <li><strong>Java (Backend):</strong> Led development of core backend services using Spring Boot for Bulk Uploads, WMS inventory & forecast ingestion, Risk Exports, Kafka migrations, Azure OV services, and operational reliability improvements. Implemented REST APIs, async workflows, security, data modeling, and unit tests</li>
+                        <li><strong>Frontend (React & Angular):</strong> Built Mass Upload and Risk Export UIs including CSV uploads, validation, progress tracking, error handling, filters, and export flows tightly integrated with backend async APIs</li>
+                        <li><strong>Event-Driven Systems (Kafka):</strong> Designed ingestion and export pipelines and executed a Cloudera → Confluent Kafka migration across 10 services and 60+ topics with zero downtime</li>
+                        <li><strong>Datastores (Snowflake & PostgreSQL):</strong> Implemented analytics-ready Snowflake tables for Risk Exports and optimized PostgreSQL schemas, indexes, and queries for high-volume transactional workloads</li>
+                        <li><strong>Testing & Automation:</strong> Built CI-integrated stress testing using JMeter and regression automation using Pytest to validate performance, stability, and edge cases before release</li>
+                        <li><strong>Cloud & DevOps (Azure, Kubernetes, ArgoCD):</strong> Deployed and operated Azure OV services using Kubernetes and GitOps-based ArgoCD deployments for consistent, safe rollouts</li>
+                        <li><strong>Polyglot Exposure:</strong> Contributed to Ruby-based tracking services, adapting quickly to a new language and established code patterns</li>
+                        <li><strong>Agile/Scrum:</strong> Delivered incrementally in sprints, breaking down ambiguous requirements into testable, shippable features</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Impact</h3>
+                    <ul>
+                        <li>Faster delivery with minimal dependency by quickly learning and applying new languages, frameworks, and platforms across the stack</li>
+                        <li>Higher system reliability and performance, driven by automated testing, stress validation, and production-ready data designs</li>
+                        <li>Improved scalability and analytics readiness through effective use of Kafka, Snowflake, and PostgreSQL for high-volume data pipelines</li>
+                        <li>Reduced operational and release risk via cloud-native deployments, GitOps practices, and standardized validation frameworks</li>
+                        <li>Increased engineering efficiency and flexibility, enabling one engineer to contribute across frontend, backend, data, and infrastructure layers</li>
+                        <li>Stronger long-term platform foundation, supporting enterprise customers, future scale, and advanced analytics use cases</li>
+                    </ul>
+                </div>
+
+                <div class="skills">
+                    <span class="skill-tag"><i class="fab fa-java"></i> Java / Spring Boot</span>
+                    <span class="skill-tag"><i class="fab fa-react"></i> React / Angular</span>
+                    <span class="skill-tag"><i class="fas fa-stream"></i> Apache Kafka</span>
+                    <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                    <span class="skill-tag"><i class="fas fa-snowflake"></i> Snowflake</span>
+                    <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure / Kubernetes</span>
+                    <span class="skill-tag"><i class="fas fa-sync-alt"></i> ArgoCD / GitOps</span>
+                    <span class="skill-tag"><i class="fas fa-plug"></i> REST APIs</span>
+                    <span class="skill-tag"><i class="fas fa-project-diagram"></i> Event-Driven Architecture</span>
+                    <span class="skill-tag"><i class="fas fa-vial"></i> JMeter / Pytest</span>
+                    <span class="skill-tag"><i class="fas fa-theater-masks"></i> Playwright</span>
+                    <span class="skill-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                    <span class="skill-tag"><i class="fas fa-wind"></i> Airflow</span>
+                    <span class="skill-tag"><i class="fab fa-aws"></i> S3</span>
+                    <span class="skill-tag"><i class="fas fa-gem"></i> Ruby</span>
+                </div>
+            </div>
+
+            <!-- Qualities Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Qualities: Presentation, Documentation, Task Management</h2>
+                    <p>Strong communication and organizational skills demonstrating SE II leadership qualities</p>
+                </div>
+
+                <div class="competencies">
+                    <div class="competency-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-presentation"></i>
+                        </div>
+                        <h3>Presentation</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Presented a clear executive and engineering overview of the Azure Order Visibility platform, aligning stakeholders on architecture, readiness, and deployment approach</li>
+                            <li>Demonstrated Kafka observability dashboards and Azure release workflows in OIS engineering forums, improving shared understanding of system health and release confidence</li>
+                            <li>Presented the AI-driven automation solution during the OIS Automation Hackathon 2025, clearly articulating the problem, approach, and measurable impact to leadership and peers</li>
+                        </ul>
+                        <p><strong>Business Impact:</strong></p>
+                        <ul>
+                            <li>Increased stakeholder confidence and cross-team alignment by clearly articulating technical solutions, operational readiness, and measurable impact</li>
+                        </ul>
+                        <div class="proof-links">
+                            <h4><i class="fas fa-link"></i> Demo & Recordings:</h4>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-video"></i> Azure Platform Overview: OV Release Process - AWS & Azure Environments (2025/09/02 12:30 GMT+05:30)
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-video"></i> OIS Engineering Meet: Monitor Infrastructure (2025/09/08 18:59 GMT+05:30)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="competency-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Authored end-to-end documentation for Azure environment setup and release processes, ensuring continuity beyond individual ownership</li>
+                            <li>Created architecture documents for critical features (Mass Upload framework, ProductLineItem OIS), clearly outlining data flows, integrations, and edge cases</li>
+                            <li>Produced clear, actionable documentation that supported onboarding, troubleshooting, and long-term maintainability</li>
+                        </ul>
+                        <p><strong>Business Impact:</strong></p>
+                        <ul>
+                            <li>Reduced execution risk and onboarding time by institutionalizing knowledge for complex platforms and features</li>
+                        </ul>
+                        <div class="proof-links">
+                            <h4><i class="fas fa-link"></i> Documentation Links:</h4>
+                            <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/edit-v2/18718097416?draftShareId=ffeee37f-5ef2-41ed-827e-5ad340d30469" target="_blank">
+                                <i class="fas fa-file-alt"></i> Azure Environment Setup
+                            </a>
+                            <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18717900811/Release+Guidelines+for+Azure+Environments" target="_blank">
+                                <i class="fas fa-file-alt"></i> Azure Release Process
+                            </a>
+                            <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18381144255" target="_blank">
+                                <i class="fas fa-file-alt"></i> ProductLineItem Feature Design
+                            </a>
+                            <a href="https://fourkites.atlassian.net/wiki/spaces/OV/pages/18718425092" target="_blank">
+                                <i class="fas fa-file-alt"></i> Mass Upload Feature - Architecture Design
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="competency-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>Task Management</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>Managed multiple parallel initiatives (Azure migration, Kafka migration, feature delivery, L1 stability, automation improvements) through clear prioritization and ownership</li>
+                            <li>Maintained a predictable delivery cadence by tracking progress, unblocking dependencies, and coordinating across engineering, product, QA, and operations teams</li>
+                            <li>Ensured high-impact initiatives progressed without scope drift or timeline slippage despite competing priorities</li>
+                        </ul>
+                        <p><strong>Business Impact:</strong></p>
+                        <ul>
+                            <li>Enabled consistent, on-time delivery of strategic initiatives while maintaining platform stability and team focus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact: Code Quality & Delivery -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Impact: Code Quality, Delivery & Timeline</h2>
+                    <p>Exceptional quality standards and consistent delivery exceeding SE I expectations</p>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Code Quality</h3>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>Designed and delivered clean, modular backend architectures across Java services (Bulk Uploads, WMS ingestion, Risk Export, ProductLineItem OIS, Azure OV), ensuring separation of concerns and long-term maintainability</li>
+                        <li>Refactored fragile and monolithic implementations (Airflow DAG SQL refactor, entity-based delivery line-item and case-pack aggregation logic) to improve readability, testability, and fault isolation</li>
+                        <li>Implemented a standardized logging pattern for end-to-end traceability, introducing correlation IDs generated at API entry and propagated consistently across API, service, Kafka producers/consumers, and database layers</li>
+                        <li>Standardized log structures to include correlationId, orderId, deliveryId, shipmentId, service name, operation, and error context, enabling search-friendly, cross-service tracing</li>
+                        <li>Applied the logging pattern to Meijer order and delivery processing flows, covering both success and failure paths</li>
+                        <li>Enforced backward-compatible API and schema evolution (delivery vs deliveryNumber, customerPOFields uniformity, pallet/part extensions) using incremental rollout strategies across all transport modes (OTR, Ocean, Air)</li>
+                        <li>Built comprehensive test coverage using unit tests, Pytest automation, and API-level validations to prevent regressions across ingestion, exports, and transactional flows</li>
+                        <li>Improved operational code quality by reducing alert noise, tuning thresholds, and implementing actionable alerts and dashboards for Kafka topics and pipelines</li>
+                        <li>Established reusable engineering patterns (Airflow DAG templates, ingestion DTOs, export frameworks, stress-test baselines) adopted by the team</li>
+                    </ul>
+                    <p><strong>Business Impact:</strong></p>
+                    <ul>
+                        <li>Significantly reduced production defects and MTTR, improving platform stability and customer trust</li>
+                        <li>Enabled self-service debugging for support teams, reducing issue resolution time from hours to minutes and cutting escalations to engineering</li>
+                        <li>Improved data accuracy and consistency, eliminating partial loads, Snowflake sync issues, and downstream data quality problems</li>
+                        <li>Lowered long-term maintenance and onboarding cost through clean abstractions, documentation, and reusable patterns</li>
+                        <li>Strengthened observability and diagnosability, improving the perceived reliability and maturity of the platform for enterprise customers</li>
+                    </ul>
+                </div>
+
+                <div class="competency-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Delivery & Timeline</h3>
+                    <p><strong>Examples:</strong></p>
+                    <ul>
+                        <li>Delivered Risk Export platform end-to-end (<strong>1.5 sprints</strong>), covering backend processing, Snowflake integration, and frontend exports while meeting all customer commitments</li>
+                        <li>Took Azure Order Visibility from zero to 7 production services (<strong>2 sprints</strong>), achieving full production readiness under aggressive timelines</li>
+                        <li>Executed Kafka migration from Cloudera to Confluent (<strong>1 month</strong>) across 10 services and 60+ topics with zero downtime, zero data loss, and zero customer impact</li>
+                        <li>Delivered the Mass Upload framework for Orders, Deliveries, and Inventory (<strong>1 sprint</strong>), enabling immediate self-service usage by implementation teams</li>
+                        <li>Ran parallel workstreams across backend, frontend, data, and infrastructure, ensuring continuous delivery without dependency bottlenecks</li>
+                        <li>Proactively owned L1 operations and release management, stabilizing the release cycle while delivering features on schedule</li>
+                        <li>Responded rapidly to customer-driven enhancements (Meijer, Walmart, Western Digital, 3M), translating feedback into production releases without timeline slippage</li>
+                        <li>Introduced automation and stress testing early (<strong>2 sprints</strong>) in the lifecycle to protect delivery timelines and prevent late-stage surprises</li>
+                    </ul>
+                    <p><strong>Business Impact:</strong></p>
+                    <ul>
+                        <li>Accelerated time-to-market for revenue-impacting features and enterprise deals</li>
+                        <li>Enabled predictable and reliable releases, reducing last-minute rollbacks and post-release firefighting</li>
+                        <li>Prevented delivery delays by identifying performance, scalability, and data issues before production</li>
+                        <li>Increased overall team throughput, as fewer cycles were spent on rework, firefighting, and escalations</li>
+                        <li>Supported faster customer onboarding, trials, and POCs, directly contributing to business growth and adoption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Business Impact Summary -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Business Impact Highlights</h2>
+                    <p>Tangible results driving organizational success</p>
+                </div>
+
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <h3>Revenue Enablement</h3>
+                        <p>Supported Walmart Supplier Connect ICT deal (<strong>$500K+</strong>) and <strong>Western Digital</strong> signing through timely platform delivery and feature implementation.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fas fa-piggy-bank"></i>
+                        <h3>Cost Optimization</h3>
+                        <p>Achieved <strong>$129,504 annual savings (61% reduction)</strong> through Kafka migration while improving reliability and scalability. That's <strong>$10,800 saved every month</strong>.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Operational Efficiency</h3>
+                        <p>Reduced POC setup time by <strong>70%</strong> (2-3 days → 2-3 hours), alert noise by <strong>95%</strong>, and MTTR from hours to minutes through proactive improvements.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fas fa-shield-check"></i>
+                        <h3>Platform Reliability</h3>
+                        <p><strong>Zero downtime, zero data loss</strong> during critical migrations. <strong>100% success rate</strong> across data pipelines. Improved customer trust and platform maturity.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Customer Satisfaction</h3>
+                        <p>Successfully delivered features for <strong>Meijer, Walmart, Western Digital, 3M, and Arrow</strong> - enabling their critical workflows and business operations.</p>
+                    </div>
+
+                    <div class="impact-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Team Excellence</h3>
+                        <p>Test coverage increased from <strong>19% → 78%</strong>. Alert volume reduced to <strong>1-3 per week</strong>. Established reusable patterns and best practices adopted across the team.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><i class="fas fa-briefcase"></i> Promotion Portfolio: Software Engineer I → Software Engineer II | Role Expectations Demonstrated</p>
+            <p style="margin-top: 10px; opacity: 0.7; font-size: 0.9em;">
+                <i class="far fa-calendar-alt"></i> 2025
+            </p>
+        </footer>
+    </div>
+
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.page-loader').classList.add('hidden');
+            }, 500);
+        });
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .competency-card, .impact-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
