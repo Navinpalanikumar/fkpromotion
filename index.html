@@ -593,6 +593,113 @@
             font-weight: 500;
         }
 
+        .achievements-showcase {
+            margin-bottom: 60px;
+            padding: 50px;
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in 0.3s both;
+        }
+
+        .achievements-showcase h2 {
+            text-align: center;
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .achievements-showcase .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .achievement-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid transparent;
+            cursor: pointer;
+            animation: scaleIn 0.6s ease-out both;
+        }
+
+        .achievement-item:nth-child(1) { animation-delay: 0.4s; }
+        .achievement-item:nth-child(2) { animation-delay: 0.5s; }
+        .achievement-item:nth-child(3) { animation-delay: 0.6s; }
+        .achievement-item:nth-child(4) { animation-delay: 0.7s; }
+        .achievement-item:nth-child(5) { animation-delay: 0.8s; }
+        .achievement-item:nth-child(6) { animation-delay: 0.9s; }
+        .achievement-item:nth-child(7) { animation-delay: 1.0s; }
+        .achievement-item:nth-child(8) { animation-delay: 1.1s; }
+        .achievement-item:nth-child(9) { animation-delay: 1.2s; }
+        .achievement-item:nth-child(10) { animation-delay: 1.3s; }
+
+        .achievement-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.2);
+            border-top-color: #667eea;
+        }
+
+        .achievement-item .icon-circle {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            color: white;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .achievement-item:hover .icon-circle {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .achievement-item h3 {
+            color: #2d3748;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.4;
+        }
+
+        .achievement-item p {
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .achievement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+            color: #667eea;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            border: 1px solid #d6e3ff;
+        }
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5em;
@@ -604,6 +711,18 @@
 
             .section-header h2 {
                 font-size: 2em;
+            }
+
+            .achievements-showcase {
+                padding: 30px 20px;
+            }
+
+            .achievements-showcase h2 {
+                font-size: 2em;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -718,6 +837,104 @@
                     <i class="fas fa-chart-line"></i>
                     <h3>78%</h3>
                     <p>Test Coverage Achievement<br>(from 19%)</p>
+                </div>
+            </div>
+
+            <!-- Achievements Showcase -->
+            <div class="achievements-showcase">
+                <h2><i class="fas fa-trophy" style="color: #667eea;"></i> 10 Major Achievements</h2>
+                <p class="subtitle">High-impact initiatives delivered with full ownership and autonomy</p>
+
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Azure Platform Launch</h3>
+                        <p>Zero → 7 production services in 1 month. Enabled <strong>$500K+ Walmart deal</strong></p>
+                        <span class="achievement-badge">Strategic Impact</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Kafka Migration</h3>
+                        <p><strong>$129K annual savings</strong> (61% reduction). 10 services, 60+ topics, zero downtime</p>
+                        <span class="achievement-badge">Cost Optimization</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-upload"></i>
+                        </div>
+                        <h3>Bulk Upload Framework</h3>
+                        <p>POC time: <strong>2-3 days → 2-3 hours</strong>. Self-service for implementation team</p>
+                        <span class="achievement-badge">70% Time Reduction</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Commit Tool</h3>
+                        <p>Improved commit consistency & traceability using Claude AI for code analysis</p>
+                        <span class="achievement-badge">Innovation</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>WMS Ingestion Platform</h3>
+                        <p>Real-time S3 + Kafka platform. Enabled <strong>Western Digital signing</strong></p>
+                        <span class="achievement-badge">Customer Win</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Risk Export Platform</h3>
+                        <p>End-to-end Service → Snowflake → UI. Unblocked <strong>Meijer teams</strong></p>
+                        <span class="achievement-badge">Analytics Enablement</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>ProductLineItem OIS</h3>
+                        <p>Shipment-order linking logic. Unblocked Arrow's FTZ. Used by <strong>3M</strong></p>
+                        <span class="achievement-badge">Feature Enablement</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>L1 Stability & Airflow</h3>
+                        <p><strong>100% DAG success</strong> rate. Alerts: <strong>1-3/week</strong>. MTTR: hours → minutes</p>
+                        <span class="achievement-badge">Reliability</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <h3>Stress Testing Framework</h3>
+                        <p>Zero-touch CI/CD integration. Automated P90/P95/P99 performance reporting</p>
+                        <span class="achievement-badge">Quality Assurance</span>
+                    </div>
+
+                    <div class="achievement-item">
+                        <div class="icon-circle">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Hackathon Co-Winner</h3>
+                        <p>Test coverage: <strong>19% → 78%</strong>. Test time: <strong>~1 hour → seconds</strong></p>
+                        <span class="achievement-badge">Recognition</span>
+                    </div>
                 </div>
             </div>
 
